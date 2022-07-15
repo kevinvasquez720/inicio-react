@@ -10,6 +10,9 @@ function App() {
     {id:3,nombre:"Camisa Electron", precio: 35},
     {id:4,nombre:"Camisa Vue", precio: 25}
   ]);
+
+  //STATE CARRITO
+  const[carrito,agregarProducto] = useState([]);
   
     //FECHA ACTUAL
     const ano = new Date().getFullYear();
@@ -26,6 +29,8 @@ function App() {
           <Producto 
           producto={producto}
           key = {producto.id}
+          carrito = {carrito}
+          agregarProducto = {agregarProducto}
           />
         ))}
         
