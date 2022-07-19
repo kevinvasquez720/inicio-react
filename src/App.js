@@ -2,8 +2,9 @@ import React, {Fragment, useState} from "react";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Producto from "./components/Producto";
+import Carrito from "./components/carrito";
 function App() {
-  //listado de productos
+  //State listado de productos
   const[productos, guardarProductos] = useState([
     {id:1,nombre:"Camisa React", precio: 50},
     {id:2,nombre:"Camisa Express", precio: 40},
@@ -11,7 +12,7 @@ function App() {
     {id:4,nombre:"Camisa Vue", precio: 25}
   ]);
 
-  //STATE CARRITO
+  //STATES CARRITO
   const[carrito,agregarProducto] = useState([]);
   
     //FECHA ACTUAL
@@ -31,8 +32,14 @@ function App() {
           key = {producto.id}
           carrito = {carrito}
           agregarProducto = {agregarProducto}
+          productos = {productos}
           />
         ))}
+
+        <Carrito 
+        carrito = {carrito}
+        agregarProductos={agregarProducto}
+        />
         
         <Footer
         //enviando una variable
