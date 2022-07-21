@@ -7,7 +7,7 @@ const Carrito = ({carrito, agregarProducto}) => (
     <h2>Carrito de Compras</h2>
 
     {carrito.length===0
-    ? <p>Esta vacío el carrito</p>   
+    ? <p>Carrito vacio</p>   
     :carrito.map(producto=>( 
         <Producto
         key = {producto.id}
