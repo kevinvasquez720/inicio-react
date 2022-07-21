@@ -38,7 +38,7 @@ function App() {
 
         <Carrito 
         carrito = {carrito}
-        agregarProductos={agregarProducto}
+        agregarProducto={agregarProducto}
         />
         
         <Footer

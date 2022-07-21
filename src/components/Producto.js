@@ -8,8 +8,9 @@ const Producto = ({producto, carrito, agregarProducto, productos})=>{
         agregarProducto([...carrito, producto])
         }
     const eliminarProducto = id =>{
-        const productos = carrito.filter(producto => producto.id !== id)
-        agregarProducto(productos)
+        const producto = carrito.filter(producto =>producto.id !== id);
+        //coloca los state en el state
+        agregarProducto(producto)
     }
     
     return(
